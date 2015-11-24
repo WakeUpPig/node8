@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../bootstrap.css"/>
+    <script>
+        window.onload=function(){
+            var name=document.getElementById("name");
+            var sex=document.getElementsByName("sex");
+
+            for(var i = 0; i<sex.length;i++){
+
+                    sex[i].onclick=function(){
+
+                        if(this.checked){
+                            switch(this.value){
+                                case '男':
+                                    alert(name+'先生，您好');
+                                    break;
+                                case '女':
+                                    alert(name+'女士，您好');
+                                    break;
+                                default:
+                                    alert(name+'您好');
+                            }
+                        }
+
+
+                    }
+            }
+
+        }
+    </script>
+</head>
+<body>
+
+<input type="text" id="name" placeholder="请输入您的姓名">
+<input type="radio"  name="sex" value="男" checked="checked"> 男
+<input type="radio"  name="sex" value="女"> 女
+
+</body>
+<html>
